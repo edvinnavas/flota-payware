@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <f:view contentType="text/html">
+        <h:head>
+            <f:facet name="first">
+                <meta content='text/html; charset=UTF-8' http-equiv="Content-Type"/>
+                <title>::FLOTA::</title>
+            </f:facet>
+        </h:head>
+        <h:body style="font-size: 12px;">
+            <h:form id="formFlota" enctype="multipart/form-data" prependId="false">
+                <img src="imagenes/logo-terra-tam.gif" alt=""/>
+                <p:panel id="pnlIndex" header="FLOTA - PAYWARE">
+                    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+                    <h:panelGrid id="pnlGrid1" columns="1">
+                        <p:outputLabel id="lbaArchivo" value="Ingrese archivo Excel(.xlsx) de carga"/>
+                        <p:fileUpload id="fupExcel" value="#{Index.file}" auto="true" mode="simple" skinSimple="true" label="Archivo"/>
+                        <p:commandButton id="btnCargar" update="msg_carga" ajax="false" value="Cargar" icon="ui-icon-check" actionListener="#{Index.cargar_archivo}"/>
+                    </h:panelGrid>
+                    <div align="center">
+                        <p:messages id="msg_carga" showDetail="true" autoUpdate="true" closable="true"/>
+                    </div>
+                </p:panel>
+            </h:form>
+        </h:body>
+    </f:view>
+</html>
