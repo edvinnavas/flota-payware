@@ -9,8 +9,9 @@ public class Driver implements Serializable {
     private String path_rep_pentaho;
 
     public Driver() {
-        path_rep_pentaho = "C:\\\\rep_flota\\";
+        // path_rep_pentaho = "C:\\\\rep_flota\\";
         // path_rep_pentaho = "/root/rep_flota/";
+        path_rep_pentaho = "/home/soporte/rep_flota/";
     }
 
     public String getPath_rep_pentaho() {
