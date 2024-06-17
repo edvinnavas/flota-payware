@@ -29,7 +29,8 @@ public class Driver implements Serializable {
             // InitialContext ctx = new InitialContext();
             // DataSource ds = (DataSource) ctx.lookup("Flota_Jndi");
             // this.conn = ds.getConnection();
-            this.conn = DriverManager.getConnection("jdbc:oracle:thin:@192.200.107.12:1521:payware", "SYSTEM", "oracle01");
+            // this.conn = DriverManager.getConnection("jdbc:oracle:thin:@192.200.107.12:1521:payware", "SYSTEM", "oracle01");
+			this.conn = DriverManager.getConnection("jdbc:oracle:thin:@192.200.109.50:1521:payware", "SYSTEM", "oracle01");
         } catch (Exception ex) {
             System.out.println("************ ERROR OPEN CONEXCION: " + ex.toString());
         }
